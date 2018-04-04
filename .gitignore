@@ -1,0 +1,8 @@
+#.gitignore
+*.csproj*
+bin/
+obj/
+Properties/
+App.config
+*.exe
+
