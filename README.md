@@ -7,7 +7,7 @@ Given an image of a maze where the start is marked by red tiles, the finish is m
 
 <pre><b>Graph G: (V , E) = (!black tiles , adjacency in image location)</b></pre>
 
-*MazeSolver* uses **A\*** to find the shortest path through this graph. **A\*** is an informed search algorithm; fundamentally a breadth first search modified with the use of a heuristic (a cost assigned to each move) to 'inform' the guess for next best move. The heuristic used in *MazeSolver* was the **weight** of a specific vertex in the path,     
+*maze-solver* uses **A\*** to find the shortest path through this graph. **A\*** is an informed search algorithm; fundamentally a breadth first search modified with the use of a heuristic (a cost assigned to each move) to 'inform' the guess for next best move. The heuristic used in *maze-solver* was the **weight** of a specific vertex in the path,     
 <pre><b>weight = # of vertices visited on the path until this vertex
          + straight line (Manhattan) distance to the goal coordinates</b>
 </pre>
@@ -32,6 +32,6 @@ This heuristic will not overestimate the cost of each path it considers because 
   - Build () - checks color of pixel and if !black then adds to the dictionary of tiles, checks for the two tile neighbors that would already be in the graph if they are valid moves and adds links 
   - Solve () - runs A* on graph using a dictionary sorted by weight and a list of AStar structs to determine what move to evaluate next
   - Print () -  makes a copy of the maze image and colors the solution path green
-- **MazeSolver** class : *MazeSolver.cs*
+- **Program** class : *MazeSolver.cs*
   - builds and solves the maze based on the image input
   - user input functions here for the maze image file
