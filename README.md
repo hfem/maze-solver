@@ -7,7 +7,7 @@ Given an image of a maze where the start is marked by red tiles, the finish is m
 
 <pre><b>Graph G: (V , E) = (!black tiles , adjacency in image location)</b></pre>
 
-*maze-solver* uses **A\*** to find the shortest path through this graph. **A\*** is an informed search algorithm; fundamentally a breadth first search modified with the use of a heuristic (a cost assigned to each move) to 'inform' the guess for next best move. The heuristic used in *maze-solver* was the **weight** of a specific vertex in the path,     
+The *maze-solver* program uses **A\*** to find the shortest path through this graph. **A\*** is an informed search algorithm; fundamentally a breadth first search modified with the use of a heuristic (a cost assigned to each move) to 'inform' the guess for next best move. The heuristic used in *maze-solver* was the **weight** of a specific vertex in the path,     
 <pre><b>weight = # of vertices visited on the path until this vertex
          + straight line (Manhattan) distance to the goal coordinates</b>
 </pre>
